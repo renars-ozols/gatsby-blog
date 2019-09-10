@@ -1,5 +1,6 @@
 import PropTypes from "prop-types"
 import React, { useState } from "react"
+import { useLockBodyScroll } from "react-use"
 import {
   HeaderWrapper,
   LogoContainer,
@@ -13,6 +14,7 @@ import {
 
 const Header = ({ siteTitle }) => {
   const [menuActive, showHideMenu] = useState(false)
+  useLockBodyScroll(menuActive)
   console.log(menuActive)
 
   return (
