@@ -1,6 +1,7 @@
 import PropTypes from "prop-types"
 import React, { useState } from "react"
 import { useLockBodyScroll } from "react-use"
+import Icon from "../icon/icon"
 import {
   HeaderWrapper,
   LogoContainer,
@@ -9,36 +10,53 @@ import {
   MenuIcon,
   Nav,
   NavItem,
-  NavItemWrapper,
+  IconLinkWrapper,
+  IconLink,
 } from "./header.styles"
 
 const Header = ({ siteTitle }) => {
   const [menuActive, showHideMenu] = useState(false)
+  const toggleMenu = () => {
+    showHideMenu(!menuActive)
+  }
   useLockBodyScroll(menuActive)
-  console.log(menuActive)
 
   return (
     <HeaderWrapper>
       <LogoAndMenuWrapper>
         <ItemWrapper>
-          <LogoContainer to="/">{siteTitle}</LogoContainer>
+          <LogoContainer to="/" onClick={toggleMenu}>
+            {siteTitle}
+          </LogoContainer>
         </ItemWrapper>
         <ItemWrapper>
-          <MenuIcon
-            active={menuActive}
-            onClick={() => showHideMenu(!menuActive)}
-          />
+          <MenuIcon active={menuActive} onClick={toggleMenu} />
         </ItemWrapper>
       </LogoAndMenuWrapper>
       <Nav active={menuActive}>
-        <NavItemWrapper active={menuActive}>
-          <NavItem to="/" onClick={() => showHideMenu(!menuActive)}>
-            Home
-          </NavItem>
-          <NavItem to="/about" onClick={() => showHideMenu(!menuActive)}>
-            About
-          </NavItem>
-        </NavItemWrapper>
+        <NavItem to="/" onClick={toggleMenu}>
+          Home
+        </NavItem>
+        <NavItem to="/page-2/" onClick={toggleMenu}>
+          Categories
+        </NavItem>
+        <NavItem to="/about" onClick={toggleMenu}>
+          About
+        </NavItem>
+        <NavItem to="/contact" onClick={toggleMenu}>
+          Contact
+        </NavItem>
+        <IconLinkWrapper>
+          <IconLink href="#">
+            <Icon iconName={"icon-facebook2"} />
+          </IconLink>
+          <IconLink href="#">
+            <Icon iconName={"icon-twitter"} />
+          </IconLink>
+          <IconLink href="#">
+            <Icon iconName={"icon-pinterest"} />
+          </IconLink>
+        </IconLinkWrapper>
       </Nav>
     </HeaderWrapper>
   )

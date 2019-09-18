@@ -10,8 +10,10 @@ export const LogoContainer = styled(Link)`
   text-decoration: none;
 `
 export const LogoAndMenuWrapper = styled.div`
-  height: 5rem;
+  position: relative;
+  z-index: 1000;
   background: ${props => props.theme.colors.black};
+  height: 5rem;
   display: flex;
   justify-content: space-between;
 `
@@ -53,28 +55,44 @@ export const MenuIcon = styled.span`
     background-color: ${props => (props.active ? "transparent" : "")};
   }
 `
-
-export const Overlay = styled.div`
-  background-color: yellow;
-  opacity: 0.2;
-  width: 100%;
-  height: 100vh;
-  z-index: 1000;
-`
 export const Nav = styled.nav`
   position: absolute;
-  background-color: red;
+  top: 0;
+  background-color: ${props => props.theme.colors.black};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   right: 0;
   width: ${props => (props.active ? 100 : 0)}%;
   height: 100vh;
-  z-index: 1000;
+  z-index: 500;
   opacity: 0.8;
-  transition: all 1s;
+  transition: all 0.2s;
+
+  > a,
+  div {
+    display: ${props => (props.active ? "flex" : "none")};
+  }
 `
 export const NavItem = styled(Link)`
-  background-color: yellow;
+  color: ${props => props.theme.colors.white};
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  align-self: center;
+  text-decoration: none;
+  text-transform: uppercase;
 `
-
-export const NavItemWrapper = styled.div`
-  display: ${props => (props.active ? "flex" : "none")};
+export const IconLinkWrapper = styled.div`
+  width: 75%;
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 2px solid ${props => props.theme.colors.white};
+`
+export const IconLink = styled.a`
+  background-color: ${props => props.theme.colors.black};
+  display: flex;
+  height: 4rem;
 `
