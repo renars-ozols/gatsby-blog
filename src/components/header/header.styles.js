@@ -6,7 +6,7 @@ export const HeaderWrapper = styled.header`
   font-size: 2rem;
 `
 export const LogoContainer = styled(Link)`
-  color: white;
+  color: ${props => props.theme.colors.white};
   text-decoration: none;
 `
 export const LogoAndMenuWrapper = styled.div`
@@ -16,6 +16,10 @@ export const LogoAndMenuWrapper = styled.div`
   height: 5rem;
   display: flex;
   justify-content: space-between;
+
+  ${({ theme }) => theme.media.laptop`
+    width: 20%;
+  `}
 `
 
 export const ItemWrapper = styled.div`
@@ -31,8 +35,12 @@ export const MenuIcon = styled.span`
   &::after {
     width: 3rem;
     height: 2px;
-    background-color: white;
+    background-color: ${props => props.theme.colors.white};
     display: inline-block;
+
+    ${({ theme }) => theme.media.laptop`
+      display: none;
+    `}
   }
 
   &::before,
@@ -67,12 +75,25 @@ export const Nav = styled.nav`
   width: ${props => (props.active ? 100 : 0)}%;
   height: 100vh;
   z-index: 500;
-  opacity: 0.8;
+  opacity: 0.95;
   transition: all 0.2s;
+
+  ${({ theme }) => theme.media.laptop`
+    flex-direction: row;
+    width: 80%;
+    height: 5rem;
+    z-index: 1000;
+    opacity: 1;
+    justify-content: space-between;
+  `}
 
   > a,
   div {
     display: ${props => (props.active ? "flex" : "none")};
+
+    ${({ theme }) => theme.media.laptop`
+      display: flex;
+    `}
   }
 `
 export const NavItem = styled(Link)`
@@ -82,6 +103,11 @@ export const NavItem = styled(Link)`
   align-self: center;
   text-decoration: none;
   text-transform: uppercase;
+
+  ${({ theme }) => theme.media.laptop`
+      font-size: 2rem;
+      margin-bottom: 0;
+    `}
 `
 export const IconLinkWrapper = styled.div`
   width: 75%;
@@ -90,9 +116,21 @@ export const IconLinkWrapper = styled.div`
   justify-content: space-between;
   align-items: flex-end;
   border-top: 2px solid ${props => props.theme.colors.white};
+
+  ${props => props.theme.media.laptop`
+      width: 20%;
+      height: 5rem;
+      border-top: none;
+      align-items: center;
+      padding: 0 1rem;
+    `}
 `
 export const IconLink = styled.a`
   background-color: ${props => props.theme.colors.black};
   display: flex;
   height: 4rem;
+
+  ${({ theme }) => theme.media.laptop`
+      height: 2rem;
+    `}
 `

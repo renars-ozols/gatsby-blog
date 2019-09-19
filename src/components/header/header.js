@@ -16,9 +16,19 @@ import {
 
 const Header = ({ siteTitle }) => {
   const [menuActive, showHideMenu] = useState(false)
+
   const toggleMenu = () => {
     showHideMenu(!menuActive)
   }
+
+  const closeMenu = () => {
+    if (!menuActive) {
+      return
+    } else {
+      showHideMenu(false)
+    }
+  }
+
   useLockBodyScroll(menuActive)
 
   return (
@@ -34,10 +44,10 @@ const Header = ({ siteTitle }) => {
         </ItemWrapper>
       </LogoAndMenuWrapper>
       <Nav active={menuActive}>
-        <NavItem to="/" onClick={toggleMenu}>
+        <NavItem to="/" onClick={closeMenu}>
           Home
         </NavItem>
-        <NavItem to="/page-2/" onClick={toggleMenu}>
+        <NavItem to="/page-2/" onClick={closeMenu}>
           Categories
         </NavItem>
         <NavItem to="/about" onClick={toggleMenu}>

@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { ThemeProvider } from "styled-components"
 import { theme } from "../../themes/theme"
 import Header from "../header/header"
-import GlobalStyles from "../utils/global.styles"
+import GlobalStyles from "../../utils/global.styles"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
