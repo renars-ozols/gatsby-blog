@@ -28,13 +28,13 @@ const Header = ({ siteTitle }) => {
 
   useLockBodyScroll(menuActive)
 
-  useEffect(() => {
-    const handleResize = () => showHideMenu(false)
-    window.addEventListener("resize", handleResize)
-    return () => {
-      window.removeEventListener("resize", handleResize)
-    }
-  })
+  // useEffect(() => {
+  //   const handleResize = () => showHideMenu(false)
+  //   window.addEventListener("resize", handleResize)
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize)
+  //   }
+  // })
 
   return (
     <HeaderWrapper>
