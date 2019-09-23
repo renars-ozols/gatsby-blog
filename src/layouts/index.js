@@ -12,6 +12,7 @@ import { ThemeProvider } from "styled-components"
 import { theme } from "../themes/theme"
 import Header from "../components/header/header"
 import GlobalStyles from "../utils/global.styles"
+import { relative } from "upath"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
