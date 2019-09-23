@@ -9,9 +9,9 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import { ThemeProvider } from "styled-components"
-import { theme } from "../../themes/theme"
-import Header from "../header/header"
-import GlobalStyles from "../../utils/global.styles"
+import { theme } from "../themes/theme"
+import Header from "../components/header/header"
+import GlobalStyles from "../utils/global.styles"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -28,15 +28,14 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyles />
-        <Header siteTitle={data.site.siteMetadata.title} />
         <div
           style={{
             margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
+            maxWidth: `120rem`,
+            backgroundColor: `#f7f7f7`,
           }}
         >
+          <Header siteTitle={data.site.siteMetadata.title} />
           <main>{children}</main>
           <footer>
             © {new Date().getFullYear()}, Built with

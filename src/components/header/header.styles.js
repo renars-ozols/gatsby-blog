@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 export const HeaderWrapper = styled.header`
   position: relative;
   font-size: 2rem;
+  background-color: ${props => props.theme.colors.black};
 `
 export const LogoContainer = styled(Link)`
   color: ${props => props.theme.colors.white};
@@ -12,7 +13,6 @@ export const LogoContainer = styled(Link)`
 export const LogoAndMenuWrapper = styled.div`
   position: relative;
   z-index: 1000;
-  background: ${props => props.theme.colors.black};
   height: 5rem;
   display: flex;
   justify-content: space-between;
@@ -63,38 +63,41 @@ export const MenuIcon = styled.span`
     background-color: ${props => (props.active ? "transparent" : "")};
   }
 `
+export const Overlay = styled.div`
+  background-color: ${props => props.theme.colors.black};
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: ${props => (props.active ? 100 : 0)}%;
+  z-index: 100;
+  opacity: 0.95;
+  transition: width 0.2s;
+
+  ${({ theme }) => theme.media.laptop`
+      display: none;
+    `}
+`
+
 export const Nav = styled.nav`
   position: absolute;
   top: 0;
-  background-color: ${props => props.theme.colors.black};
-  display: flex;
+  display: ${props => (props.active ? "flex" : "none")};
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  right: 0;
-  width: ${props => (props.active ? 100 : 0)}%;
+  width: 100%;
   height: 100vh;
   z-index: 500;
-  opacity: 0.95;
-  transition: all 0.2s;
 
   ${({ theme }) => theme.media.laptop`
+    display: flex;
     flex-direction: row;
     width: 80%;
+    right: 0;
     height: 5rem;
-    z-index: 1000;
-    opacity: 1;
     justify-content: space-between;
   `}
-
-  > a,
-  div {
-    display: ${props => (props.active ? "flex" : "none")};
-
-    ${({ theme }) => theme.media.laptop`
-      display: flex;
-    `}
-  }
 `
 export const NavItem = styled(Link)`
   color: ${props => props.theme.colors.white};
@@ -110,7 +113,7 @@ export const NavItem = styled(Link)`
     `}
 `
 export const IconLinkWrapper = styled.div`
-  width: 75%;
+  width: 22rem;
   height: 6rem;
   display: flex;
   justify-content: space-between;

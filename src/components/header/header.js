@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { useLockBodyScroll } from "react-use"
 import Icon from "../icon/icon"
 import {
@@ -8,6 +8,7 @@ import {
   LogoAndMenuWrapper,
   ItemWrapper,
   MenuIcon,
+  Overlay,
   Nav,
   NavItem,
   IconLinkWrapper,
@@ -16,10 +17,6 @@ import {
 
 const Header = ({ siteTitle }) => {
   const [menuActive, showHideMenu] = useState(false)
-
-  const toggleMenu = () => {
-    showHideMenu(!menuActive)
-  }
 
   const closeMenu = () => {
     if (!menuActive) {
@@ -31,18 +28,30 @@ const Header = ({ siteTitle }) => {
 
   useLockBodyScroll(menuActive)
 
+  useEffect(() => {
+    const handleResize = () => showHideMenu(false)
+    window.addEventListener("resize", handleResize)
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
+  })
+
   return (
     <HeaderWrapper>
       <LogoAndMenuWrapper>
         <ItemWrapper>
-          <LogoContainer to="/" onClick={toggleMenu}>
+          <LogoContainer to="/" onClick={closeMenu}>
             {siteTitle}
           </LogoContainer>
         </ItemWrapper>
         <ItemWrapper>
-          <MenuIcon active={menuActive} onClick={toggleMenu} />
+          <MenuIcon
+            active={menuActive}
+            onClick={() => showHideMenu(!menuActive)}
+          />
         </ItemWrapper>
       </LogoAndMenuWrapper>
+      <Overlay active={menuActive} />
       <Nav active={menuActive}>
         <NavItem to="/" onClick={closeMenu}>
           Home
@@ -50,10 +59,10 @@ const Header = ({ siteTitle }) => {
         <NavItem to="/page-2/" onClick={closeMenu}>
           Categories
         </NavItem>
-        <NavItem to="/about" onClick={toggleMenu}>
+        <NavItem to="/about" onClick={closeMenu}>
           About
         </NavItem>
-        <NavItem to="/contact" onClick={toggleMenu}>
+        <NavItem to="/contact" onClick={closeMenu}>
           Contact
         </NavItem>
         <IconLinkWrapper>
