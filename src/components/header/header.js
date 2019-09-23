@@ -59,10 +59,10 @@ const Header = ({ siteTitle }) => {
         <NavItem to="/page-2/" onClick={closeMenu}>
           Categories
         </NavItem>
-        <NavItem to="/about" onClick={closeMenu}>
+        <NavItem to="/" onClick={closeMenu}>
           About
         </NavItem>
-        <NavItem to="/contact" onClick={closeMenu}>
+        <NavItem to="/" onClick={closeMenu}>
           Contact
         </NavItem>
         <IconLinkWrapper>
