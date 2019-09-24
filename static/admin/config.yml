@@ -15,6 +15,7 @@ collections:
       preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Featured Image", name: "featuredimage", widget: image }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }

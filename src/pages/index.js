@@ -1,15 +1,17 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Hero from "../components/hero/hero"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import Hero from "../components/hero/hero"
+import BlogRoll from "../components/blog-roll/blog-roll"
+import Image from "../components/image"
 import Lorem from "../components/lorem"
 
-const IndexPage = () => (
+const IndexPage = data => (
   <div>
     <SEO title="Home" />
     <Hero />
+    <BlogRoll />
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
