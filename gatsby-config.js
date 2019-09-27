@@ -8,10 +8,10 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-layout`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: 'assets',
+        path: `${__dirname}/static/assets`,
       },
     },
     {
@@ -19,6 +19,13 @@ module.exports = {
       options: {
         name: `content`,
         path: `${__dirname}/content`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
     {
@@ -32,9 +39,36 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-remark`,
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-relative-images',
+            options: {
+              name: 'assets',
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 590,
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: 'gatsby-remark-copy-linked-files',
+      options: {
+        destinationDir: 'static',
+      },
+    },
     {
       resolve: "gatsby-plugin-webpack-bundle-analyzer",
       options: {
