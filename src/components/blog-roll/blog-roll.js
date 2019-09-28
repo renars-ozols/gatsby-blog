@@ -10,7 +10,7 @@ const BlogRoll = () => (
   <StaticQuery
     query={graphql`
       query {
-  allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
+  allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}, limit: 3) {
     edges {
       node {
         id
@@ -29,8 +29,13 @@ const BlogRoll = () => (
         fields {
           slug
         }
-        excerpt(truncate: true)
+        excerpt(pruneLength: 300)
       }
+    }
+  }
+  site {
+    siteMetadata {
+      author
     }
   }
 }
@@ -43,7 +48,13 @@ const BlogRoll = () => (
             Latest posts
           </Heading>
           {data.allMarkdownRemark.edges.map(({ node }) => (
-              <BlogPreviewCard key={node.id}/>
+              <BlogPreviewCard key={node.id} 
+              image={node.frontmatter.featuredimage.childImageSharp.fluid} 
+              author={data.site.siteMetadata.author} 
+              title={node.frontmatter.title}
+              date={node.frontmatter.date}
+              excerpt={node.excerpt}
+              />
     //         <div key={node.id}>
     // {node.frontmatter.featuredimage ?         <Img
     //     fluid={node.frontmatter.featuredimage.childImageSharp.fluid}
