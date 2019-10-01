@@ -54,6 +54,7 @@ const BlogRoll = () => (
               title={node.frontmatter.title}
               date={node.frontmatter.date}
               excerpt={node.excerpt}
+              slug={node.fields.slug}
               />
     //         <div key={node.id}>
     // {node.frontmatter.featuredimage ?         <Img

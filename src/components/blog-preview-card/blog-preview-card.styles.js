@@ -1,15 +1,38 @@
 import styled from 'styled-components'
-import Img from "gatsby-image"
+import { Link } from "gatsby"
 
 export const Wrapper = styled.div`
-    padding: 0.5rem;
-`
-
-export const StyledImg = styled(Img)`
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 1.5rem;
+    box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.15);
     
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
 `
 
 export const StyledSpan = styled.span`
-    font-size: 1.5rem;
+    font-size: 2rem;
+    padding:0 1rem;
     font-style: italic;
+`
+
+export const StyledParagraph = styled.p`
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    padding:0 1rem;
+`
+
+export const StyledLink = styled(Link)`
+    border: 1px solid ${props => props.theme.colors.black};
+    text-decoration: none;
+    text-transform: uppercase;
+    color: ${props => props.theme.colors.black};
+    padding: 0 1rem;
+    font-size: 2rem;
+    display: block;
+    margin-right: 1rem;
+    margin-left: auto;
+    width: 13.5rem;
 `
