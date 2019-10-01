@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Link } from "gatsby"
 
 export const Wrapper = styled.div`
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     padding-bottom: 1.5rem;
     box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.15);

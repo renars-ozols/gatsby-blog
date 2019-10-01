@@ -1,6 +1,5 @@
 import React from "react"
-import { graphql, StaticQuery, Link } from "gatsby"
-import Img from "gatsby-image"
+import { graphql, StaticQuery} from "gatsby"
 import Heading from "../heading/heading"
 import BlogPreviewCard from '../blog-preview-card/blog-preview-card'
 
@@ -56,12 +55,6 @@ const BlogRoll = () => (
               excerpt={node.excerpt}
               slug={node.fields.slug}
               />
-    //         <div key={node.id}>
-    // {node.frontmatter.featuredimage ?         <Img
-    //     fluid={node.frontmatter.featuredimage.childImageSharp.fluid}
-    //   /> : null}
-    //           <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
-    //         </div>
           ))}
         </Wrapper>
       )

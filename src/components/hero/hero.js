@@ -24,8 +24,7 @@ const Hero = () => (
           <BackgroundImage
             Tag="div"
             fluid={imageData}
-            backgroundColor={`#040e18`}
-            style={{ height: `100%` }}
+            style={{ height: `100%`}}
           ></BackgroundImage>
         </Wrapper>
       )

@@ -3,7 +3,7 @@ import styled, { css } from "styled-components"
 
 const baseStyle = css`
   margin-bottom: ${props => props.noMargin && "0"};
-  color: ${props => props.theme.colors.black};
+  color: ${props => props.white ? props.theme.colors.white : props.theme.colors.black};
   font-weight: bold;
   margin-top: 0;
   text-align: ${props => {
