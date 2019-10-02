@@ -16,6 +16,7 @@ export default ({ data }) => {
         image={backgroundFluidImageStack}
         date={post.frontmatter.date}
         html={post.html}
+        author={data.site.siteMetadata.author}
       />
   )
 }
@@ -37,5 +38,10 @@ export const query = graphql`
         title
       }
     }
+    site {
+    siteMetadata {
+      author
+    }
+  }
   }
 `

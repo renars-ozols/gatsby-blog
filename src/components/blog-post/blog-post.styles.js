@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 import BackgroundImage from 'gatsby-background-image'
-import {StyledSpan} from '../blog-preview-card/blog-preview-card.styles'
 
 export const StyledBackground = styled(BackgroundImage)`
     height: 50vh;
@@ -19,6 +18,13 @@ export const Content = styled.div`
     font-size: 1.5rem;
     padding: 0 1rem;
 `
-export const StyledDate = styled(StyledSpan)`
+
+export const AuthorContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.7rem;
+    font-style: italic;
+    font-weight: bold;
     margin: 1rem 0;
+    padding: 0 1rem;
 `
