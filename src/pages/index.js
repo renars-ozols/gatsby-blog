@@ -10,7 +10,7 @@ import Image from "../components/image"
 import Lorem from "../components/lorem"
 
 const IndexPage = data => (
-  <div>
+  <>
     <SEO title="Home" />
     <Hero />
     <Container>
@@ -29,7 +29,7 @@ const IndexPage = data => (
     <Lorem />
     <Lorem />
     <Lorem />
-  </div>
+  </>
 )
 
 export default IndexPage

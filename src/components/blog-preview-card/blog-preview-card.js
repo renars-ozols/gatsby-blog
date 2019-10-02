@@ -1,7 +1,7 @@
 import React from 'react'
 import Img from "gatsby-image"
 
-import {Wrapper, StyledImg, StyledSpan, StyledParagraph, StyledLink} from './blog-preview-card.styles'
+import {Wrapper, StyledSpan, StyledParagraph, StyledLink} from './blog-preview-card.styles'
 import Heading from "../heading/heading"
 
 

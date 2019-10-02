@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
-import Heading from '../components/heading/heading'
+import BlogPost from '../components/blog-post/blog-post'
 
 export default ({ data }) => {
   const post = data.markdownRemark
@@ -11,18 +10,13 @@ export default ({ data }) => {
   ]
 
   return (
-    <div>
-      <BackgroundImage
-       Tag="div"
-       fluid={backgroundFluidImageStack}
-       style={{ height: `60vh`, textAlign: `center`}}
-       >
-       <div style={{ position: `absolute`, top: `20%`, left: `50%`, transform:`translateX(-50%)`}}>
-       <Heading h1 white>{post.frontmatter.title}</Heading>
-       </div>
-       </BackgroundImage>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} style={{fontSize: `1.5rem`}}/>
-    </div>
+      <BlogPost 
+        title={post.frontmatter.title}
+        description={post.frontmatter.description}
+        image={backgroundFluidImageStack}
+        date={post.frontmatter.date}
+        html={post.html}
+      />
   )
 }
 
@@ -33,7 +27,7 @@ export const query = graphql`
       frontmatter {
         featuredimage {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 1300) {
               ...GatsbyImageSharpFluid
             }
           }

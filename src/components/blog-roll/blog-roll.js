@@ -3,8 +3,6 @@ import { graphql, StaticQuery} from "gatsby"
 import Heading from "../heading/heading"
 import BlogPreviewCard from '../blog-preview-card/blog-preview-card'
 
-import { Wrapper } from "./blog-roll.styles"
-
 const BlogRoll = () => (
   <StaticQuery
     query={graphql`
@@ -42,7 +40,7 @@ const BlogRoll = () => (
     render={data => {
         console.log(data)
       return (
-        <Wrapper>
+        <section>
           <Heading h2 center noMargin uppercase>
             Latest posts
           </Heading>
@@ -56,7 +54,7 @@ const BlogRoll = () => (
               slug={node.fields.slug}
               />
           ))}
-        </Wrapper>
+        </section>
       )
     }}
   />
