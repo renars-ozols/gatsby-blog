@@ -17,6 +17,7 @@ export default ({ data }) => {
         date={post.frontmatter.date}
         html={post.html}
         author={data.site.siteMetadata.author}
+        tags={post.frontmatter.tags}
       />
   )
 }
@@ -36,6 +37,7 @@ export const query = graphql`
         date(formatString: "DD MMMM, YYYY")
         description
         title
+        tags
       }
     }
     site {
