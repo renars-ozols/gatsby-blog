@@ -3,6 +3,9 @@ title: Cooking dinner
 featuredimage: /assets/adding-adult-apron-1537166.jpg
 date: 2019-09-28T06:25:44.762Z
 description: Delicious dinner asian style
+tags:
+  - dinner
+  - cooking
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus in hac habitasse platea dictumst quisque sagittis. Ac tincidunt vitae semper quis lectus nulla. Ultrices dui sapien eget mi proin sed. Ullamcorper malesuada proin libero nunc consequat interdum. Velit laoreet id donec ultrices. Dolor sit amet consectetur adipiscing elit duis. Euismod lacinia at quis risus sed vulputate. Bibendum at varius vel pharetra vel turpis nunc eget lorem. Id venenatis a condimentum vitae. Morbi blandit cursus risus at. Pellentesque habitant morbi tristique senectus et netus et malesuada. Eu consequat ac felis donec et odio pellentesque. Tincidunt id aliquet risus feugiat in ante. Consectetur adipiscing elit duis tristique sollicitudin nibh. Risus viverra adipiscing at in tellus integer. Felis donec et odio pellentesque. Ultricies mi eget mauris pharetra.
 
