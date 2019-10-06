@@ -3,6 +3,9 @@ title: Traveling in Asia
 featuredimage: /assets/ancient-antique-architecture-879359.jpg
 date: 2019-09-30T06:28:00.000Z
 description: About travelling in asia
+tags:
+  - travel
+  - asia
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed risus pretium quam vulputate dignissim. Ante in nibh mauris cursus mattis molestie. Natoque penatibus et magnis dis. Et malesuada fames ac turpis egestas integer. Sit amet consectetur adipiscing elit. Viverra aliquet eget sit amet tellus. Ac odio tempor orci dapibus ultrices in. Pharetra diam sit amet nisl suscipit. Sit amet volutpat consequat mauris nunc congue. Morbi tristique senectus et netus et malesuada fames ac. Congue eu consequat ac felis donec et. Aliquam sem et tortor consequat id porta nibh venenatis cras. Quam quisque id diam vel quam elementum pulvinar etiam. Pharetra convallis posuere morbi leo urna molestie at elementum. Integer vitae justo eget magna fermentum iaculis eu non diam. Duis at tellus at urna condimentum mattis pellentesque. Ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim.
 
