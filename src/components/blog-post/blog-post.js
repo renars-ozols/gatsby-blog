@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'gatsby'
-import { kebabCase } from 'lodash'
+import {kebabCase} from 'lodash'
 
 import Seo from '../seo'
 import Heading from '../heading/heading'

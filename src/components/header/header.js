@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { useLockBodyScroll } from "react-use"
 import Icon from "../icon/icon"
 import {
