@@ -5,6 +5,7 @@ module.exports = {
     author: `Renars`,
   },
   plugins: [
+    `gatsby-plugin-lodash`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-layout`,
     {
