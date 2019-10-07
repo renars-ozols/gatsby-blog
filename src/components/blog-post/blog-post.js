@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'gatsby'
-import toKebabCase from '../../utils/toKebabCase'
+import { kebabCase } from 'lodash'
 
 import Seo from '../seo'
 import Heading from '../heading/heading'
@@ -23,7 +23,7 @@ const BlogPost = ({title, description, image, date, author, html, tags}) => (
         <ul>
             {tags.map(tag => (
                 <li key={tag + `tag`}>
-                    <Link to={`/tags/${toKebabCase(tag)}/`}>{tag}</Link>
+                    <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                 </li>  
             ))}
         </ul>
