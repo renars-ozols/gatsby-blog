@@ -5,7 +5,12 @@ module.exports = {
     author: `Renars`,
   },
   plugins: [
-    `gatsby-plugin-lodash`,
+    {
+      resolve: `gatsby-plugin-lodash`,
+      options: {
+        disabledFeatures: [`shorthands`, `cloning`, `currying`, `collections`, `exotics`, `guards`, `metadata`, `deburring`, `unicode`, `chaining`, `memoizing`, `coercions`, `flattening`, `placeholders`],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-layout`,
     {
