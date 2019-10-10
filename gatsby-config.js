@@ -70,13 +70,6 @@ module.exports = {
         destinationDir: 'static',
       },
     },
-    {
-      resolve: "gatsby-plugin-webpack-bundle-analyzer",
-      options: {
-        analyzerPort: 3000,
-        production: true,
-      },
-    },
     `gatsby-plugin-webpack-size`,
     {
       resolve: `gatsby-plugin-manifest`,

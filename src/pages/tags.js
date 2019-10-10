@@ -7,6 +7,8 @@ import {kebabCase} from "lodash"
 // Components
 import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"
+import TagsContainer from '../components/tags-container/tags-container'
+import Tag from '../components/tag/tag'
 
 const TagsPage = ({
   data: {
@@ -20,6 +22,11 @@ const TagsPage = ({
     <Helmet title={title} />
     <div>
       <h1>Tags</h1>
+      <TagsContainer>
+        {group.map(tag => (
+            <Tag key={tag.fieldValue} tag={tag.fieldValue}/>
+        ))}
+      </TagsContainer>
       <ul>
         {group.map(tag => (
           <li key={tag.fieldValue}>

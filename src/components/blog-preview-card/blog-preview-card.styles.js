@@ -2,8 +2,6 @@ import styled from 'styled-components'
 import { Link } from "gatsby"
 
 export const Wrapper = styled.div`
-    width: 95%;
-    margin: 0 auto;
     padding-bottom: 1.5rem;
     box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.15);
     
@@ -19,7 +17,6 @@ export const StyledSpan = styled.span`
 `
 
 export const StyledParagraph = styled.p`
-    font-size: 1.5rem;
     margin: 1rem 0;
     padding:0 1rem;
 `

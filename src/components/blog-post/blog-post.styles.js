@@ -14,11 +14,6 @@ export const HeadingWrapper = styled.div`
     transform:translateX(-50%);
 `
 
-export const Content = styled.div`
-    font-size: 1.5rem;
-    padding: 0 1rem;
-`
-
 export const AuthorContainer = styled.div`
     display: flex;
     justify-content: space-between;
@@ -26,5 +21,4 @@ export const AuthorContainer = styled.div`
     font-style: italic;
     font-weight: bold;
     margin: 1rem 0;
-    padding: 0 1rem;
 `

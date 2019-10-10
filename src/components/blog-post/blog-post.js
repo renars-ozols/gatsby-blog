@@ -1,10 +1,11 @@
 import React from 'react'
-import {Link} from 'gatsby'
-import {kebabCase} from 'lodash'
 
 import Seo from '../seo'
 import Heading from '../heading/heading'
-import {StyledBackground, HeadingWrapper, Content, AuthorContainer} from './blog-post.styles'
+import Container from '../container/container'
+import TagsContainer from '../tags-container/tags-container'
+import Tag from '../tag/tag'
+import {StyledBackground, HeadingWrapper, AuthorContainer} from './blog-post.styles'
 
 
 const BlogPost = ({title, description, image, date, author, html, tags}) => (
@@ -15,18 +16,18 @@ const BlogPost = ({title, description, image, date, author, html, tags}) => (
                 <Heading h1 white noMargin center>{title}</Heading>
             </HeadingWrapper>
         </StyledBackground>
-        <AuthorContainer>
-            <span>{date}</span>
-            <span>Author: {author}</span>
-        </AuthorContainer>
-        <Content dangerouslySetInnerHTML={{ __html: html }}/>
-        <ul>
-            {tags.map(tag => (
-                <li key={tag + `tag`}>
-                    <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                </li>  
-            ))}
-        </ul>
+        <Container>
+            <AuthorContainer>
+                <span>{date}</span>
+                <span>Author: {author}</span>
+            </AuthorContainer>
+            <div dangerouslySetInnerHTML={{ __html: html }}/>
+            <TagsContainer>
+                {tags.map(tag => (
+                    <Tag key={tag + `tag`} tag={tag}/>
+                ))}
+            </TagsContainer>
+        </Container>
     </article>
 )
 

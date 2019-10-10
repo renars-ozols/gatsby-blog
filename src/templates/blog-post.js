@@ -23,8 +23,9 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+  query($id: String!) {
+    markdownRemark(id: { eq: $id } ) {
+      id
       html
       frontmatter {
         featuredimage {
