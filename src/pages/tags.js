@@ -1,43 +1,30 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-// Utilities
-import {kebabCase} from "lodash"
-
 // Components
-import { Helmet } from "react-helmet"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
+import Seo from '../components/seo'
+import Container from '../components/container/container'
+import Heading from '../components/heading/heading'
 import TagsContainer from '../components/tags-container/tags-container'
 import Tag from '../components/tag/tag'
 
 const TagsPage = ({
   data: {
     allMarkdownRemark: { group },
-    site: {
-      siteMetadata: { title },
-    },
   },
 }) => (
-  <div>
-    <Helmet title={title} />
-    <div>
-      <h1>Tags</h1>
+  <Container>
+    <Seo title="Tags" />
+    <Heading h2 center noMargin uppercase>
+      Tags
+    </Heading>
       <TagsContainer>
         {group.map(tag => (
-            <Tag key={tag.fieldValue} tag={tag.fieldValue}/>
+            <Tag key={tag.fieldValue} tag={tag.fieldValue} count={tag.totalCount}/>
         ))}
       </TagsContainer>
-      <ul>
-        {group.map(tag => (
-          <li key={tag.fieldValue}>
-            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-              {tag.fieldValue} ({tag.totalCount})
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </div>
+  </Container>
 )
 
 TagsPage.propTypes = {

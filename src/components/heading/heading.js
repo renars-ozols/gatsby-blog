@@ -40,7 +40,7 @@ const HeadingFour = styled.h4`
 `
 
 const HeadingFive = styled.h5`
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 0.6rem;
   ${baseStyle};
 `

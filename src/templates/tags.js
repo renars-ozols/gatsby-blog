@@ -3,6 +3,10 @@ import PropTypes from "prop-types"
 
 // Components
 import { Link, graphql } from "gatsby"
+import Container from '../components/container/container'
+import Heading from '../components/heading/heading'
+import BlogSmallPreviewCard from '../components/blog-small-preview-card/blog-small-preview-card'
+import Button from '../components/button/button'
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -12,25 +16,24 @@ const Tags = ({ pageContext, data }) => {
   } tagged with "${tag}"`
 
   return (
-    <div>
-      <h1>{tagHeader}</h1>
-      <ul>
+    <Container as={'section'} paddingTop>
+      <Heading h5 >{tagHeader}</Heading>
+      <div style={{display: `flex`, flexWrap: `wrap`}}>
         {edges.map(({ node }) => {
           const { slug } = node.fields
           const { title } = node.frontmatter
+          const image = node.frontmatter.featuredimage.childImageSharp.fixed
           return (
-            <li key={slug}>
-              <Link to={slug}>{title}</Link>
-            </li>
+            <BlogSmallPreviewCard key={slug} slug={slug} image={image} title={title}/>
           )
         })}
-      </ul>
+      </div>
       {/*
               This links to a page that does not yet exist.
               We'll come back to it!
             */}
-      <Link to="/tags/">All tags</Link>
-    </div>
+      <Button as={Link} to="/tags/" right='true'>All tags</Button>
+    </Container>
   )
 }
 
@@ -74,6 +77,13 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            featuredimage {
+              childImageSharp {
+                fixed(width: 100, height: 100) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
           }
         }
       }

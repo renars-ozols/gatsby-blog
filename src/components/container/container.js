@@ -2,6 +2,6 @@ import React from 'react'
 
 import {Container} from './container.styles'
 
-export default ({children}) => (
-    <Container>{children}</Container>
+export default ({children, ...otherProps}) => (
+    <Container {...otherProps}>{children}</Container>
 )

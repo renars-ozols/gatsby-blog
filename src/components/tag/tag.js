@@ -2,10 +2,10 @@ import React from 'react'
 
 import {kebabCase} from 'lodash'
 
-import {StyledListItem, StyledLink} from './tag.styles'
+import {StyledLink} from './tag.styles'
 
-const Tag = ({tag}) => (
-    <StyledListItem><StyledLink to={`/tags/${kebabCase(tag)}/`}>{tag}</StyledLink></StyledListItem>
+const Tag = ({tag, count}) => (
+    <StyledLink to={`/tags/${kebabCase(tag)}/`}>{tag} {count ? <span>({count})</span> : null}</StyledLink>
 )
 
 export default Tag
