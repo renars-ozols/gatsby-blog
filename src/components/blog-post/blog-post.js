@@ -10,7 +10,7 @@ import {StyledBackground, HeadingWrapper, AuthorContainer} from './blog-post.sty
 
 const BlogPost = ({title, description, image, date, author, html, tags}) => (
     <article>
-        <Seo title={title} description={description}/>
+        <Seo title={title} description={description} article/>
         <StyledBackground fluid={image}>
             <HeadingWrapper>
                 <Heading h1 white noMargin center>{title}</Heading>

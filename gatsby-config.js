@@ -3,6 +3,7 @@ module.exports = {
     title: `My blog`,
     description: `This is my blog project build with gatsby`,
     author: `Renars`,
+    siteUrl: `https://laughing-mirzakhani-dbe044.netlify.com/`,
   },
   plugins: [
     `gatsby-plugin-lodash`,
