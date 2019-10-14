@@ -14,6 +14,7 @@ export default ({ data }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description}
         image={backgroundFluidImageStack}
+        imageUrl={post.frontmatter.featuredimage.childImageSharp.fluid.src}
         date={post.frontmatter.date}
         html={post.html}
         author={data.site.siteMetadata.author}
