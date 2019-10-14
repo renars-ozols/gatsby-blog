@@ -8,9 +8,9 @@ import Tag from '../tag/tag'
 import {StyledBackground, HeadingWrapper, AuthorContainer} from './blog-post.styles'
 
 
-const BlogPost = ({title, description, image, imageUrl, date, author, html, tags}) => (
+const BlogPost = ({title, description, image, imageUrl, date, author, html, tags, slug}) => (
     <article>
-        <Seo title={title} description={description} article image={imageUrl}/>
+        <Seo title={title} description={description} article image={imageUrl} pageUrl={slug}/>
         <StyledBackground fluid={image}>
             <HeadingWrapper>
                 <Heading h1 white noMargin center>{title}</Heading>

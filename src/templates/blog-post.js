@@ -19,6 +19,7 @@ export default ({ data }) => {
         html={post.html}
         author={data.site.siteMetadata.author}
         tags={post.frontmatter.tags}
+        slug={post.fields.slug}
       />
   )
 }
@@ -28,6 +29,9 @@ export const query = graphql`
     markdownRemark(id: { eq: $id } ) {
       id
       html
+      fields {
+        slug
+      }
       frontmatter {
         featuredimage {
           childImageSharp {
