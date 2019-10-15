@@ -28,7 +28,7 @@ const HeadingTwo = styled.h2`
 `
 
 const HeadingThree = styled.h3`
-  font-size: 3.5;
+  font-size: 3.5rem;
   margin-bottom: 1rem;
   ${baseStyle};
 `

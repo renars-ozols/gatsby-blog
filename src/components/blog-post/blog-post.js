@@ -1,16 +1,17 @@
 import React from 'react'
-
 import Seo from '../seo'
 import Heading from '../heading/heading'
 import Container from '../container/container'
 import TagsContainer from '../tags-container/tags-container'
 import Tag from '../tag/tag'
 import SocialShare from '../social-share/social-share'
+import PrevNext from '../prev-next/prev-next'
 
 import {StyledBackground, HeadingWrapper, AuthorContainer} from './blog-post.styles'
 
 
-const BlogPost = ({title, description, image, imageUrl, date, author, html, tags, twitterHandle, url}) => (
+const BlogPost = ({title, description, image, imageUrl, 
+    date, author, html, tags, twitterHandle, url, prev, next}) => (
     <article>
         <Seo title={title} description={description} article image={imageUrl} pageUrl={url}/>
         <StyledBackground fluid={image}>
@@ -34,10 +35,12 @@ const BlogPost = ({title, description, image, imageUrl, date, author, html, tags
                 config: {
                     url,
                     title,
-                    image: imageUrl
+                    image: imageUrl,
+                    description,
                 },
             }}
             tags={tags}/>
+            <PrevNext prev={prev} next={next}/>
         </Container>
     </article>
 )
