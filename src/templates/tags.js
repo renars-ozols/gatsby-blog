@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 // Components
 import { Link, graphql } from "gatsby"
 import Container from '../components/container/container'
+import Seo from '../components/seo'
 import Heading from '../components/heading/heading'
 import BlogSmallPreviewCard from '../components/blog-small-preview-card/blog-small-preview-card'
 import Button from '../components/button/button'
@@ -17,6 +18,7 @@ const Tags = ({ pageContext, data }) => {
 
   return (
     <Container as={'section'} paddingTop>
+      <Seo title={tag}/>
       <Heading h5 >{tagHeader}</Heading>
       <div style={{display: `flex`, flexWrap: `wrap`}}>
         {edges.map(({ node }) => {

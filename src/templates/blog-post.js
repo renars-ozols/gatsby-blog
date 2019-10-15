@@ -19,7 +19,8 @@ export default ({ data }) => {
         html={post.html}
         author={data.site.siteMetadata.author}
         tags={post.frontmatter.tags}
-        slug={post.fields.slug}
+        twitterHandle={data.site.siteMetadata.twitterHandle}
+        url={`${data.site.siteMetadata.siteUrl}${post.fields.slug}`}
       />
   )
 }
@@ -49,6 +50,8 @@ export const query = graphql`
     site {
     siteMetadata {
       author
+      twitterHandle
+      siteUrl
     }
   }
   }

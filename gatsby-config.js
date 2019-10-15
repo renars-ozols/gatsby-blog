@@ -3,6 +3,7 @@ module.exports = {
     title: `My blog`,
     description: `This is my blog project build with gatsby`,
     author: `Renars`,
+    twitterHandle: `@renars_ozols`,
     siteUrl: `https://laughing-mirzakhani-dbe044.netlify.com/`,
   },
   plugins: [
