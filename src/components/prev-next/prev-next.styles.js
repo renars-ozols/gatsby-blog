@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 export const Wrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
+    margin: 3rem 0;
 `
 
 export const StyledPrevLink = styled(Link)`
