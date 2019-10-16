@@ -1,7 +1,10 @@
 import React from 'react'
 
-import {TagsContainer} from './tags-container.styles'
+import {Wrapper, StyledHeading, TagsContainer} from './tags-container.styles'
 
 export default ({children}) => (
-    <TagsContainer>{children}</TagsContainer>
+    <Wrapper>
+        <StyledHeading h5 uppercase noMargin>Tags:</StyledHeading>
+        <TagsContainer>{children}</TagsContainer>
+    </Wrapper>
 )

@@ -1,8 +1,22 @@
 import styled from 'styled-components'
 
+import Heading from '../heading/heading'
+
 export const Wrapper = styled.div`
-    margin: 0 auto 0 auto;
-    max-width: 20rem;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid ${props => props.theme.colors.grey};
+    padding: 0.2rem 0;
+`
+
+export const StyledHeading = styled(Heading)`
+    color: inherit;
+    margin-right: 1rem;
+`
+
+export const SocialWrapper = styled.div`
+    width: 15rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 `
