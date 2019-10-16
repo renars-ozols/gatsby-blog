@@ -10,8 +10,9 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import { ThemeProvider } from "styled-components"
 import { theme } from "../themes/theme"
-import Header from "../components/header/header"
 import GlobalStyles from "../utils/global.styles"
+import Header from "../components/header/header"
+import Footer from '../components/footer/footer'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -37,11 +38,7 @@ const Layout = ({ children }) => {
         >
           <Header siteTitle={data.site.siteMetadata.title} />
           <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
+          <Footer/>
         </div>
       </>
     </ThemeProvider>
