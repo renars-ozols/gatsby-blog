@@ -4,7 +4,7 @@ import {Link} from 'gatsby'
 export const StyledLink = styled(Link)`
     border: 1px solid ${props => props.theme.colors.grey};
     border-radius: 3px;
-    margin-right: 1rem;
+    margin: 0.3rem 1rem 0.3rem 0;
     padding: 0.2rem 0.5rem;
     text-decoration: none;
     color: ${props => props.theme.colors.grey};

@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     border-bottom: 2px solid ${props => props.theme.colors.grey};
-    padding: 0.2rem 0;
+    padding: 1rem 0;
 `
 
 export const StyledHeading = styled(Heading)`

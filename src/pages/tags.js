@@ -19,7 +19,7 @@ const TagsPage = ({
     <Heading h2 center noMargin uppercase>
       Tags
     </Heading>
-      <TagsContainer>
+      <TagsContainer noBorder>
         {group.map(tag => (
             <Tag key={tag.fieldValue} tag={tag.fieldValue} count={tag.totalCount}/>
         ))}

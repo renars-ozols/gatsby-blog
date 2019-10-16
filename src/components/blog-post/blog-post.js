@@ -31,7 +31,7 @@ const BlogPost = ({id, title, description, image, imageUrl,
                             <span>Author: {author}</span>
                         </AuthorContainer>
                         <div dangerouslySetInnerHTML={{ __html: html }}/>
-                        <TagsContainer>
+                        <TagsContainer heading>
                             {tags.map(tag => (
                                 <Tag key={tag + `tag`} tag={tag}/>
                             ))}
