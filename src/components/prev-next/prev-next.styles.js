@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
     flex-wrap: wrap;
 `
 
-export const StyledLeftLink = styled(Link)`
+export const StyledPrevLink = styled(Link)`
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
@@ -16,7 +16,7 @@ export const StyledLeftLink = styled(Link)`
     font-weight: bold;
     text-decoration: none;
 `
-export const StyledRightLink = styled(StyledLeftLink)`
+export const StyledNextLink = styled(StyledPrevLink)`
     align-items: flex-end;
     margin-left: auto;
 `

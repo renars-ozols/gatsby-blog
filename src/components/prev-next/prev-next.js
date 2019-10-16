@@ -1,15 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { Wrapper, StyledLeftLink, StyledRightLink, StyledSpan } from './prev-next.styles'
+import { Wrapper, StyledPrevLink, StyledNextLink, StyledSpan } from './prev-next.styles'
 
 const PrevNext = ({ prev, next}) => (
     <Wrapper>
         {
-            prev && (<StyledLeftLink to={prev.fields.slug}><StyledSpan>&#8592;</StyledSpan>{prev.frontmatter.title}</StyledLeftLink>)
+            prev && (<StyledPrevLink to={prev.fields.slug}><StyledSpan>&#8592;</StyledSpan>{prev.frontmatter.title}</StyledPrevLink>)
         }
         {
-            next && (<StyledRightLink to={next.fields.slug}><StyledSpan>&#8594;</StyledSpan>{next.frontmatter.title}</StyledRightLink>)
+            next && (<StyledNextLink to={next.fields.slug}><StyledSpan>&#8594;</StyledSpan>{next.frontmatter.title}</StyledNextLink>)
         }
     </Wrapper>
 )
