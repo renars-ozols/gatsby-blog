@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
     margin-top: 1rem;
     padding: 1rem 0;
     border: solid ${props => props.theme.colors.grey};
-    border-width: 2px 0 ${props => props.noBorder ? 0 : 2}px 0;
+    border-width: 2px 0 ${props => props.noBottomBorder ? 0 : 2}px 0;
 `
 
 export const TagsWrapper = styled.div`
