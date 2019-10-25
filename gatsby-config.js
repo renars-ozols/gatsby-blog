@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `My blog`,
@@ -11,9 +15,9 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-layout`,
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'assets',
+        name: "assets",
         path: `${__dirname}/static/assets`,
       },
     },
@@ -49,9 +53,9 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-relative-images',
+            resolve: "gatsby-remark-relative-images",
             options: {
-              name: 'assets',
+              name: "assets",
             },
           },
           {
@@ -67,12 +71,27 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-remark-copy-linked-files',
+      resolve: "gatsby-remark-copy-linked-files",
       options: {
-        destinationDir: 'static',
+        destinationDir: "static",
       },
     },
     `gatsby-plugin-webpack-size`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-150207331-2",
+      },
+    },
+    {
+      resolve: `gatsby-source-google-analytics-reporting-api`,
+      options: {
+        email: process.env.CLIENT_EMAIL,
+        key: process.env.PRIVATE_KEY,
+        viewId: process.env.VIEW_ID,
+        startDate: `2019-10-16`,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

@@ -3,7 +3,8 @@ import styled, { css } from "styled-components"
 
 const baseStyle = css`
   margin-bottom: ${props => props.noMargin && "0"};
-  color: ${props => props.white ? props.theme.colors.white : props.theme.colors.black};
+  color: ${props =>
+    props.white ? props.theme.colors.white : props.theme.colors.black};
   font-weight: bold;
   margin-top: 0;
   text-align: ${props => {
@@ -23,13 +24,13 @@ const HeadingOne = styled.h1`
 
 const HeadingTwo = styled.h2`
   font-size: 4rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 2rem;
   ${baseStyle};
 `
 
 const HeadingThree = styled.h3`
   font-size: 3.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   ${baseStyle};
 `
 

@@ -17,6 +17,28 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 }
 
+exports.sourceNodes = ({ actions, getNodesByType }) => {
+  const { createNodeField } = actions
+  // get all page view nodes from google analytics, then filter out markdown nodes
+  // where slug matches by page view node's path
+  // then for each of those nodes create field with view count
+  const pageViewNodes = getNodesByType(`PageViews`)
+  getNodesByType(`MarkdownRemark`)
+    .filter(node =>
+      pageViewNodes.find(node2 => node2.path === node.fields.slug)
+    )
+    .forEach(node => {
+      const pVnode = pageViewNodes.find(
+        node2 => node2.path === node.fields.slug
+      )
+      createNodeField({
+        node,
+        name: `views`,
+        value: pVnode.totalCount,
+      })
+    })
+}
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
   const blogPostTemplate = path.resolve("src/templates/blog-post.js")
@@ -60,7 +82,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       context: {
         id: node.id,
         prev,
-        next
+        next,
       },
     })
   })
