@@ -5,6 +5,7 @@ import Hero from "../components/hero/hero"
 import Container from "../components/container/container"
 import BlogRoll from "../components/blog-roll/blog-roll"
 import MostPopularPosts from "../components/most-popular-posts/most-popular-posts"
+import About from "../components/about/about"
 
 const IndexPage = () => (
   <>
@@ -12,7 +13,8 @@ const IndexPage = () => (
     <Hero />
     <Container>
       <BlogRoll />
-      <MostPopularPosts/>
+      <MostPopularPosts />
+      <About />
     </Container>
   </>
 )
