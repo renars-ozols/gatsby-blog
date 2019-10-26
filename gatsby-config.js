@@ -87,7 +87,7 @@ module.exports = {
       resolve: `gatsby-source-google-analytics-reporting-api`,
       options: {
         email: process.env.CLIENT_EMAIL,
-        key: process.env.PRIVATE_KEY,
+        key: process.env.PRIVATE_KEY.replace(/\\n/g, "\n"),
         viewId: process.env.VIEW_ID,
         startDate: `2019-10-16`,
       },
