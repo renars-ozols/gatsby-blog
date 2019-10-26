@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const StyledSection = styled.section`
-  margin-top: 2rem;
+  padding: 1rem 0;
 `
 export const Wrapper = styled.div`
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);

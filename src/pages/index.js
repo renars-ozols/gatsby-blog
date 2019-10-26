@@ -6,6 +6,7 @@ import Container from "../components/container/container"
 import BlogRoll from "../components/blog-roll/blog-roll"
 import MostPopularPosts from "../components/most-popular-posts/most-popular-posts"
 import About from "../components/about/about"
+import TagsPreview from "../components/tags-preview/tags-preview"
 
 const IndexPage = () => (
   <>
@@ -15,6 +16,7 @@ const IndexPage = () => (
       <BlogRoll />
       <MostPopularPosts />
       <About />
+      <TagsPreview />
     </Container>
   </>
 )

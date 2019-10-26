@@ -1,5 +1,4 @@
-import styled from 'styled-components'
-
+import styled from "styled-components"
 
 // export const Button = styled.button`
 //     background-color: lightblue;
@@ -18,16 +17,18 @@ import styled from 'styled-components'
 // `
 
 export const Button = styled.button`
-    background-color: ${props => props.theme.colors.black};
-    box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.15);
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: ${props => props.theme.colors.white};
-    padding: 0 1rem;
-    font-size: 3rem;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    width: 100%;
+  background-color: ${props => props.theme.colors.black};
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: ${props => props.theme.colors.white};
+  padding: 0 1rem;
+  font-size: 3rem;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
 `
