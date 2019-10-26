@@ -7,6 +7,7 @@ export const StyledSection = styled.section`
 
 export const Wrapper = styled.div`
   border-radius: 3px;
+  margin-bottom: 4rem;
   padding: 1rem;
   display: flex;
   flex-wrap: wrap;

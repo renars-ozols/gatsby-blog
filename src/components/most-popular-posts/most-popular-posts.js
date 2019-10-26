@@ -9,6 +9,7 @@ const MostPopularPosts = () => {
       allMarkdownRemark(
         sort: { fields: fields___views, order: DESC }
         filter: { fields: { views: { gte: 0 } } }
+        limit: 3
       ) {
         edges {
           node {
