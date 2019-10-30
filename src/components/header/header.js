@@ -62,7 +62,7 @@ const Header = ({ siteTitle }) => {
         <NavItem to="/" onClick={closeMenu}>
           About
         </NavItem>
-        <NavItem to="/" onClick={closeMenu}>
+        <NavItem to="/contact" onClick={closeMenu}>
           Contact
         </NavItem>
         <IconLinkWrapper>

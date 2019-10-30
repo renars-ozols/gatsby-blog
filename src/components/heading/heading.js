@@ -6,7 +6,7 @@ const baseStyle = css`
   color: ${props =>
     props.white ? props.theme.colors.white : props.theme.colors.black};
   font-weight: bold;
-  margin-top: 0;
+  margin-top: ${props => (props.marginTop ? "2rem" : "0")};
   text-align: ${props => {
     if (props.center) return "center"
     if (props.right) return "right"

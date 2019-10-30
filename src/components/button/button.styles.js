@@ -27,6 +27,8 @@ export const Button = styled.button`
   color: ${props => props.theme.colors.white};
   padding: 0 1rem;
   font-size: 3rem;
+  font-family: inherit;
+  letter-spacing: 3px;
   display: block;
   margin-right: auto;
   margin-left: auto;

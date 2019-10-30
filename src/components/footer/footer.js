@@ -20,7 +20,7 @@ const Footer = () => (
         <StyledLink to={"/"}>Home</StyledLink>
         <StyledLink to={"/"}>Categories</StyledLink>
         <StyledLink to={"/"}>About</StyledLink>
-        <StyledLink to={"/"}>Contact</StyledLink>
+        <StyledLink to={"/contact"}>Contact</StyledLink>
       </Content>
       <StyledContent>
         <StyledP>
