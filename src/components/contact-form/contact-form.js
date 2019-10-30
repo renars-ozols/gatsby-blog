@@ -22,10 +22,14 @@ const ContactForm = () => {
       message: Yup.string().required("Required"),
     }),
     onSubmit: async values => {
+      const data = {
+        "form-name": form.getAttribute("name"),
+        ...values,
+      }
       const options = {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        data: qs.stringify(values),
+        data: qs.stringify(data),
         url: "/contact",
       }
 
