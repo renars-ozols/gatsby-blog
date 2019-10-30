@@ -26,7 +26,7 @@ const ContactForm = () => {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         data: qs.stringify(values),
-        url: "/",
+        url: "/contact",
       }
 
       try {
