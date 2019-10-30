@@ -1,6 +1,8 @@
 import React from "react"
 import { useFormik } from "formik"
 import * as Yup from "yup"
+import axios from "axios"
+import qs from "qs"
 import Button from "../button/button"
 
 import { FormGroup, StyledInput } from "./contact-form.styles"
@@ -19,8 +21,19 @@ const ContactForm = () => {
         .required("Required"),
       message: Yup.string().required("Required"),
     }),
-    onSubmit: values => {
-      alert(JSON.stringify(values, null, 2))
+    onSubmit: async values => {
+      const options = {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        data: qs.stringify(values),
+        url: "/",
+      }
+
+      try {
+        await axios(options)
+      } catch (e) {
+        console.log(e)
+      }
     },
   })
   return (
@@ -28,8 +41,7 @@ const ContactForm = () => {
       name="Contact Form"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
-      method="post" // remove this for ajax call
-      //onSubmit={formik.handleSubmit}
+      onSubmit={formik.handleSubmit}
       noValidate
     >
       <input type="hidden" name="form-name" value="Contact Form" />
