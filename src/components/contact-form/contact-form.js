@@ -23,7 +23,7 @@ const ContactForm = () => {
     }),
     onSubmit: async values => {
       const data = {
-        "form-name": form.getAttribute("name"),
+        "form-name": "Contact Form",
         ...values,
       }
       const options = {
