@@ -33,6 +33,7 @@ const ContactForm = () => {
 
     onSubmit: async (values, { resetForm }) => {
       const data = {
+        "form-name": "Contact Form",
         ...values,
       }
       const options = {
