@@ -1,4 +1,8 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
+
+export const StyledForm = styled.form`
+  padding-bottom: 3rem;
+`
 
 export const FormGroup = styled.div`
   margin-bottom: 1rem;
@@ -24,4 +28,17 @@ export const StyledInput = styled.input`
     outline: none;
     box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.4);
   }
+`
+const spin = keyframes`
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+`
+export const Loader = styled.div`
+  margin: 0.2rem auto;
+  border: 0.5rem solid ${props => props.theme.colors.white};
+  border-radius: 50%;
+  border-top: 0.5rem solid ${props => props.theme.colors.grey};
+  width: 2.8rem;
+  height: 2.8rem;
+  animation: ${spin} 0.8s linear infinite;
 `

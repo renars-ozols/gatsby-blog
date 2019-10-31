@@ -1816,6 +1816,11 @@ amdefine@>=0.0.4:
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
   integrity sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=
 
+animate.css@^3.7.2:
+  version "3.7.2"
+  resolved "https://registry.yarnpkg.com/animate.css/-/animate.css-3.7.2.tgz#e73e0d50e92cb1cfef1597d9b38a9481020e08ea"
+  integrity sha512-0bE8zYo7C0KvgOYrSVfrzkbYk6IOTVPNqkiHg2cbyF4Pq/PXzilz4BRWA3hwEUBoMp5VBgrC29lQIZyhRWdBTw==
+
 ansi-align@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ansi-align/-/ansi-align-2.0.0.tgz#c36aeccba563b89ceb556f3690f0b1d9e3547f7f"
@@ -11707,6 +11712,13 @@ react-modal@^3.8.1:
     prop-types "^15.5.10"
     react-lifecycles-compat "^3.0.0"
     warning "^4.0.3"
+
+react-notifications-component@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-notifications-component/-/react-notifications-component-2.1.0.tgz#c0ff1ab754bf25f0b00d6430b1fd38133be5cc0e"
+  integrity sha512-qCjPVmrdz96t1/oOCdJzJYAAKha5r2LhiVcE2uM/3DIHOZlkQ0MqZtmoPzLiZoQ2kOUom5HeVX6gEbp+lRSnEw==
+  dependencies:
+    prop-types "^15.6.2"
 
 react-onclickoutside@^6.5.0:
   version "6.9.0"
