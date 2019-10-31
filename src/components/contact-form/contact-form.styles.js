@@ -1,7 +1,10 @@
 import styled, { keyframes } from "styled-components"
 
 export const StyledForm = styled.form`
-  padding-bottom: 3rem;
+  padding: 1rem 1rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
 `
 
 export const FormGroup = styled.div`
