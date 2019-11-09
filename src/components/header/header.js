@@ -56,10 +56,10 @@ const Header = () => {
         <NavItem to="/" onClick={closeMenu}>
           Home
         </NavItem>
-        <NavItem to="/page-2/" onClick={closeMenu}>
-          Categories
+        <NavItem to="/#most-popular" onClick={closeMenu}>
+          Most Popular
         </NavItem>
-        <NavItem to="/" onClick={closeMenu}>
+        <NavItem to="/#about" onClick={closeMenu}>
           About
         </NavItem>
         <NavItem to="/contact" onClick={closeMenu}>

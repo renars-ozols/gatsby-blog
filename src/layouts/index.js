@@ -9,6 +9,10 @@ import Footer from "../components/footer/footer"
 import { PageContainer } from "./layout.styles"
 
 const Layout = ({ children }) => {
+  if (typeof window !== "undefined") {
+    // eslint-disable-next-line global-require
+    require("smooth-scroll")('a[href*="#"]')
+  }
   return (
     <ThemeProvider theme={theme}>
       <>

@@ -17,7 +17,7 @@ const About = () => {
     }
   `)
   return (
-    <StyledSection>
+    <StyledSection id="about">
       <Heading h3 uppercase center>
         About me
       </Heading>

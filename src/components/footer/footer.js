@@ -18,8 +18,8 @@ const Footer = () => (
     <Wrapper>
       <Content>
         <StyledLink to={"/"}>Home</StyledLink>
-        <StyledLink to={"/"}>Categories</StyledLink>
-        <StyledLink to={"/"}>About</StyledLink>
+        <StyledLink to={"/#most-popular"}>Most Popular</StyledLink>
+        <StyledLink to={"/#about"}>About</StyledLink>
         <StyledLink to={"/contact"}>Contact</StyledLink>
       </Content>
       <StyledContent>

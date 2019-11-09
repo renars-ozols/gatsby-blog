@@ -26,7 +26,7 @@ export const StyledLink = styled(Link)`
   text-transform: uppercase;
 
   &:not(:last-child) {
-    margin-right: 1rem;
+    margin-right: 2rem;
   }
 
   ${({ theme }) => theme.media.laptop`

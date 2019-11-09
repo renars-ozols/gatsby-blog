@@ -34,7 +34,7 @@ const MostPopularPosts = () => {
     }
   `)
   return (
-    <section>
+    <section id="most-popular">
       <Heading h3 uppercase center>
         Most Popular
       </Heading>
