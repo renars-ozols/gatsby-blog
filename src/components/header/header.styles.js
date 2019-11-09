@@ -7,7 +7,6 @@ export const HeaderWrapper = styled.header`
   background-color: ${props => props.theme.colors.black};
 `
 export const LogoContainer = styled(Link)`
-  color: ${props => props.theme.colors.white};
   text-decoration: none;
 `
 export const LogoAndMenuWrapper = styled.div`

@@ -1,5 +1,7 @@
 import PropTypes from "prop-types"
 import React, { useState } from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import { useLockBodyScroll } from "react-use"
 import Icon from "../icon/icon"
 import {
@@ -16,8 +18,19 @@ import {
 } from "./header.styles"
 
 const Header = () => {
-  const [menuActive, showHideMenu] = useState(false)
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "logo2.png" }) {
+        childImageSharp {
+          fixed(width: 50, height: 50) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `)
 
+  const [menuActive, showHideMenu] = useState(false)
   const closeMenu = () => {
     if (!menuActive) {
       return
@@ -39,11 +52,9 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <LogoAndMenuWrapper>
-        <ItemWrapper>
-          <LogoContainer to="/" onClick={closeMenu}>
-            Blog
-          </LogoContainer>
-        </ItemWrapper>
+        <LogoContainer to="/" onClick={closeMenu}>
+          <Img fixed={data.file.childImageSharp.fixed} />
+        </LogoContainer>
         <ItemWrapper>
           <MenuIcon
             active={menuActive}

@@ -5,6 +5,7 @@ export const StyledFooter = styled.footer`
   background-color: ${props => props.theme.colors.black};
   margin-top: 3rem;
 `
+
 export const Wrapper = styled.div`
   padding: 0 2.5rem;
 `
