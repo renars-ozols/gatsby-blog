@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import Img from "gatsby-image"
 
 export const StyledLink = styled(Link)`
+  background-color: ${props => props.theme.colors.white2};
   display: flex;
   flex-basis: 100%;
   text-decoration: none;
@@ -16,6 +17,15 @@ export const StyledLink = styled(Link)`
   color: ${props => props.theme.colors.black};
   font-weight: bold;
   align-items: center;
+
+  ${({ theme }) => theme.media.laptop`
+      transition: all .2s;
+      &:hover {
+        background-color: ${props => props.theme.colors.grey};
+        color: ${props => props.theme.colors.white};
+        transform: translateY(-0.3rem);
+      }
+    `}
 `
 
 export const StyledImg = styled(Img)`

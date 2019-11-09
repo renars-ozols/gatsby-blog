@@ -33,4 +33,13 @@ export const Button = styled.button`
   margin-right: auto;
   margin-left: auto;
   width: 100%;
+
+  ${({ theme }) => theme.media.laptop`
+      cursor: pointer;
+      transition: all .2s;
+      &:hover {
+        color: ${props => props.theme.colors.grey2};
+        transform: translateY(-0.3rem);
+      }
+    `}
 `

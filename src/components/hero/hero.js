@@ -1,8 +1,7 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
 
-import { Wrapper } from "./hero.styles"
+import { StyledBg } from "./hero.styles"
 
 const Hero = () => (
   <StaticQuery
@@ -19,15 +18,7 @@ const Hero = () => (
     `}
     render={data => {
       const imageData = data.file.childImageSharp.fluid
-      return (
-        <Wrapper>
-          <BackgroundImage
-            Tag="div"
-            fluid={imageData}
-            style={{ height: `100%`}}
-          ></BackgroundImage>
-        </Wrapper>
-      )
+      return <StyledBg Tag="section" fluid={imageData} />
     }}
   />
 )

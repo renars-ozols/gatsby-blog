@@ -32,6 +32,11 @@ const HeadingThree = styled.h3`
   font-size: 3.5rem;
   margin-bottom: 2rem;
   ${baseStyle};
+
+  ${({ theme }) => theme.media.laptop`
+    margin-bottom: 4rem;
+    letter-spacing: 0.5rem;
+  `}
 `
 
 const HeadingFour = styled.h4`

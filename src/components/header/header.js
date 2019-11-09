@@ -15,7 +15,7 @@ import {
   IconLink,
 } from "./header.styles"
 
-const Header = ({ siteTitle }) => {
+const Header = () => {
   const [menuActive, showHideMenu] = useState(false)
 
   const closeMenu = () => {
@@ -41,7 +41,7 @@ const Header = ({ siteTitle }) => {
       <LogoAndMenuWrapper>
         <ItemWrapper>
           <LogoContainer to="/" onClick={closeMenu}>
-            {siteTitle}
+            Blog
           </LogoContainer>
         </ItemWrapper>
         <ItemWrapper>

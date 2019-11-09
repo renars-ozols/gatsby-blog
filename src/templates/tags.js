@@ -3,11 +3,11 @@ import PropTypes from "prop-types"
 
 // Components
 import { Link, graphql } from "gatsby"
-import Container from '../components/container/container'
-import Seo from '../components/seo'
-import Heading from '../components/heading/heading'
-import BlogSmallPreviewCard from '../components/blog-small-preview-card/blog-small-preview-card'
-import Button from '../components/button/button'
+import Container from "../components/container/container"
+import Seo from "../components/seo"
+import Heading from "../components/heading/heading"
+import BlogSmallPreviewCard from "../components/blog-small-preview-card/blog-small-preview-card"
+import Button from "../components/button/button"
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -17,16 +17,25 @@ const Tags = ({ pageContext, data }) => {
   } tagged with "${tag}"`
 
   return (
-    <Container as={'section'} paddingTop>
-      <Seo title={tag}/>
-      <Heading h5 >{tagHeader}</Heading>
-      <div style={{display: `flex`, flexWrap: `wrap`}}>
+    <Container
+      as={"section"}
+      paddingTop
+      style={{ maxWidth: `100rem`, margin: `0 auto` }}
+    >
+      <Seo title={tag} />
+      <Heading h5>{tagHeader}</Heading>
+      <div style={{ display: `flex`, flexWrap: `wrap` }}>
         {edges.map(({ node }) => {
           const { slug } = node.fields
           const { title } = node.frontmatter
           const image = node.frontmatter.featuredimage.childImageSharp.fixed
           return (
-            <BlogSmallPreviewCard key={slug} slug={slug} image={image} title={title}/>
+            <BlogSmallPreviewCard
+              key={slug}
+              slug={slug}
+              image={image}
+              title={title}
+            />
           )
         })}
       </div>
@@ -34,7 +43,9 @@ const Tags = ({ pageContext, data }) => {
               This links to a page that does not yet exist.
               We'll come back to it!
             */}
-      <Button as={Link} to="/tags/" right='true'>All tags</Button>
+      <Button as={Link} to="/tags/" right="true">
+        All tags
+      </Button>
     </Container>
   )
 }

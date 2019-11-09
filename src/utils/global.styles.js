@@ -21,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: "Inconsolata", monospace;
     font-weight: 400;
     line-height: 1.6;
+    background-color: ${props => props.theme.colors.black};
     color: ${props => props.theme.colors.grey};
   }
 `

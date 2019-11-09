@@ -1,24 +1,34 @@
-import styled from 'styled-components'
-
-import BackgroundImage from 'gatsby-background-image'
+import styled from "styled-components"
+import Container from "../container/container"
+import BackgroundImage from "gatsby-background-image"
 
 export const StyledBackground = styled(BackgroundImage)`
-    height: 50vh;
+  height: 50vh;
+`
+export const StyledContainer = styled(Container)`
+  ${({ theme }) => theme.media.tablet`
+    margin:0 auto;
+    width: 90%;
+  `}
+
+  ${({ theme }) => theme.media.laptop`
+    margin:0 auto;
+    width: 80%;
+  `}
 `
 
 export const HeadingWrapper = styled.div`
-    position: absolute;
-    width: 90%;
-    top: 20%;
-    left: 50%;
-    transform:translateX(-50%);
+  position: absolute;
+  width: 90%;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
 `
 
-export const AuthorContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.7rem;
-    font-style: italic;
-    font-weight: bold;
-    margin: 1rem 0;
+export const StyledSpan = styled.span`
+  display: block;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: bold;
+  margin: 1.5rem 0;
 `

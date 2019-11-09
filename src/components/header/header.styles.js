@@ -17,7 +17,7 @@ export const LogoAndMenuWrapper = styled.div`
   display: flex;
   justify-content: space-between;
 
-  ${({ theme }) => theme.media.laptop`
+  ${({ theme }) => theme.media.tablet`
     width: 20%;
   `}
 `
@@ -38,7 +38,7 @@ export const MenuIcon = styled.span`
     background-color: ${props => props.theme.colors.white};
     display: inline-block;
 
-    ${({ theme }) => theme.media.laptop`
+    ${({ theme }) => theme.media.tablet`
       display: none;
     `}
   }
@@ -74,7 +74,7 @@ export const Overlay = styled.div`
   opacity: 0.95;
   transition: width 0.2s;
 
-  ${({ theme }) => theme.media.laptop`
+  ${({ theme }) => theme.media.tablet`
       display: none;
     `}
 `
@@ -90,7 +90,7 @@ export const Nav = styled.nav`
   height: 100vh;
   z-index: 500;
 
-  ${({ theme }) => theme.media.laptop`
+  ${({ theme }) => theme.media.tablet`
     display: flex;
     flex-direction: row;
     width: 80%;
@@ -107,9 +107,17 @@ export const NavItem = styled(Link)`
   text-decoration: none;
   text-transform: uppercase;
 
-  ${({ theme }) => theme.media.laptop`
+  ${({ theme }) => theme.media.tablet`
       font-size: 2rem;
       margin-bottom: 0;
+    `}
+
+  ${({ theme }) => theme.media.laptop`
+      transition: all .2s;
+      &:hover {
+        color: ${props => props.theme.colors.grey2};
+        transform: scale(1.5) translateY(-0.5rem);
+      }
     `}
 `
 export const IconLinkWrapper = styled.div`
@@ -120,7 +128,7 @@ export const IconLinkWrapper = styled.div`
   align-items: flex-end;
   border-top: 2px solid ${props => props.theme.colors.white};
 
-  ${props => props.theme.media.laptop`
+  ${props => props.theme.media.tablet`
       width: 20%;
       height: 5rem;
       border-top: none;
@@ -133,7 +141,15 @@ export const IconLink = styled.a`
   display: flex;
   height: 4rem;
 
-  ${({ theme }) => theme.media.laptop`
+  ${({ theme }) => theme.media.tablet`
       height: 2rem;
+    `}
+
+  ${({ theme }) => theme.media.laptop`
+      transition: all .2s;
+      &:hover {
+        color: ${props => props.theme.colors.grey2};
+        transform: scale(1.5) translateY(-0.5rem);
+      }
     `}
 `

@@ -12,7 +12,7 @@ const IndexPage = () => (
   <>
     <SEO title="Home" />
     <Hero />
-    <Container>
+    <Container flex>
       <BlogRoll />
       <MostPopularPosts />
       <About />

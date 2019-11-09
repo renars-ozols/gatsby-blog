@@ -5,7 +5,7 @@ export const StyledSvg = styled.svg`
   width: 4rem;
   fill: ${props => props.theme.colors.white};
 
-  ${({ theme }) => theme.media.laptop`
+  ${({ theme }) => theme.media.tablet`
       height: 2rem;
       width: 2rem;
     `}

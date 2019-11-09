@@ -42,27 +42,24 @@ const BlogRoll = () => (
         }
       }
     `}
-    render={data => {
-      console.log(data)
-      return (
-        <StyledSection>
-          <Heading h3 center uppercase>
-            Latest posts
-          </Heading>
-          {data.allMarkdownRemark.edges.map(({ node }) => (
-            <BlogPreviewCard
-              key={node.id}
-              image={node.frontmatter.featuredimage.childImageSharp.fluid}
-              author={data.site.siteMetadata.author}
-              title={node.frontmatter.title}
-              date={node.frontmatter.date}
-              excerpt={node.excerpt}
-              slug={node.fields.slug}
-            />
-          ))}
-        </StyledSection>
-      )
-    }}
+    render={data => (
+      <StyledSection>
+        <Heading h3 center uppercase>
+          Latest posts
+        </Heading>
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <BlogPreviewCard
+            key={node.id}
+            image={node.frontmatter.featuredimage.childImageSharp.fluid}
+            author={data.site.siteMetadata.author}
+            title={node.frontmatter.title}
+            date={node.frontmatter.date}
+            excerpt={node.excerpt}
+            slug={node.fields.slug}
+          />
+        ))}
+      </StyledSection>
+    )}
   />
 )
 

@@ -1,9 +1,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Heading from "../heading/heading"
-import Img from "gatsby-image"
 
-import { StyledSection, Wrapper, TextWrapper } from "./about.styles"
+import { StyledSection, StyledBg, Wrapper, TextWrapper } from "./about.styles"
 
 const About = () => {
   const data = useStaticQuery(graphql`
@@ -23,7 +22,7 @@ const About = () => {
         About me
       </Heading>
       <Wrapper>
-        <Img fluid={data.file.childImageSharp.fluid} />
+        <StyledBg Tag="div" fluid={data.file.childImageSharp.fluid} />
         <TextWrapper>
           <Heading h5>John Doe</Heading>
           <p>

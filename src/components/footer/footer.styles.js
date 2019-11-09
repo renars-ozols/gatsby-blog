@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 export const StyledFooter = styled.footer`
   background-color: ${props => props.theme.colors.black};
+  margin-top: 3rem;
 `
 export const Wrapper = styled.div`
   padding: 0 2.5rem;
@@ -27,11 +28,19 @@ export const StyledLink = styled(Link)`
   &:not(:last-child) {
     margin-right: 1rem;
   }
+
+  ${({ theme }) => theme.media.laptop`
+      transition: all .2s;
+      &:hover {
+        color: ${props => props.theme.colors.grey2};
+        transform: translateY(-0.3rem);
+      }
+    `}
 `
 
 export const StyledP = styled.p`
   padding: 0.5rem 0;
   text-align: center;
   color: ${props => props.theme.colors.white};
-  font-size: 1rem;
+  font-size: 1.5rem;
 `
