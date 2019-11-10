@@ -4,6 +4,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { useLockBodyScroll } from "react-use"
 import Icon from "../icon/icon"
+import ScrollTopBtn from "../scroll-top-btn/scroll-top-btn"
+
 import {
   HeaderWrapper,
   LogoContainer,
@@ -23,7 +25,7 @@ const Header = () => {
       file(relativePath: { eq: "logo2.png" }) {
         childImageSharp {
           fixed(width: 50, height: 50) {
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_withWebp
           }
         }
       }
@@ -50,7 +52,7 @@ const Header = () => {
   // })
 
   return (
-    <HeaderWrapper>
+    <HeaderWrapper id="top">
       <LogoAndMenuWrapper>
         <LogoContainer to="/" onClick={closeMenu}>
           <Img fixed={data.file.childImageSharp.fixed} />
@@ -88,6 +90,7 @@ const Header = () => {
           </IconLink>
         </IconLinkWrapper>
       </Nav>
+      <ScrollTopBtn />
     </HeaderWrapper>
   )
 }
