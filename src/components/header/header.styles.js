@@ -120,7 +120,7 @@ export const NavItem = styled(Link)`
     `}
 `
 export const IconLinkWrapper = styled.div`
-  width: 22rem;
+  width: 25rem;
   height: 6rem;
   display: flex;
   justify-content: space-between;
