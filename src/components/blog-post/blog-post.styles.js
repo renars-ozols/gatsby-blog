@@ -6,15 +6,15 @@ export const StyledBackground = styled(BackgroundImage)`
   height: 50vh;
 `
 export const StyledContainer = styled(Container)`
+  background-color: #fff;
   ${({ theme }) => theme.media.tablet`
-    margin:0 auto;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+    margin: 3rem auto 0 auto;
     width: 90%;
   `}
-
   ${({ theme }) => theme.media.laptop`
-    margin:0 auto;
     width: 80%;
-  `}
+  `};
 `
 
 export const HeadingWrapper = styled.div`
