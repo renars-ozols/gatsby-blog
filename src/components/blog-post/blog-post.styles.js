@@ -6,10 +6,9 @@ export const StyledBackground = styled(BackgroundImage)`
   height: 50vh;
 `
 export const StyledContainer = styled(Container)`
-  background-color: #fff;
+  padding-bottom: 3rem;
   ${({ theme }) => theme.media.tablet`
-    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
-    margin: 3rem auto 0 auto;
+    margin: 0 auto;
     width: 90%;
   `}
   ${({ theme }) => theme.media.laptop`

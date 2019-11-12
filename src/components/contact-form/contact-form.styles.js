@@ -1,12 +1,14 @@
 import styled, { keyframes } from "styled-components"
 
 export const StyledForm = styled.form`
+  background-color: #fff;
   padding: 1rem 1rem;
+  margin-bottom: 3rem;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   border-radius: 3px;
 
   ${({ theme }) => theme.media.tablet`
-    margin: 0 auto;
+    margin: 0 auto 3rem auto;
     width: 70%;
   `}
 `

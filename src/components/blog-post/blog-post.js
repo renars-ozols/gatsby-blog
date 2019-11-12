@@ -33,7 +33,7 @@ const BlogPost = ({
     config: { identifier: id, title },
   }
   return (
-    <article>
+    <article style={{ backgroundColor: `#fff` }}>
       <Seo
         title={title}
         description={description}
