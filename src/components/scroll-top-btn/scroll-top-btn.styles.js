@@ -12,4 +12,9 @@ export const StyledBtn = styled.a`
   text-decoration: none;
   padding: 0 1rem;
   border-radius: 3px;
+
+  ${props => props.theme.media.laptop`
+      font-size: 3rem
+      padding: 0 1.5rem;
+    `}
 `

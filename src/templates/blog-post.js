@@ -39,8 +39,8 @@ export const query = graphql`
       frontmatter {
         featuredimage {
           childImageSharp {
-            fluid(maxWidth: 1300) {
-              ...GatsbyImageSharpFluid
+            fluid(maxWidth: 1440) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }

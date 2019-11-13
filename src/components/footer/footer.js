@@ -17,7 +17,7 @@ const Footer = () => {
       file(relativePath: { eq: "logo2.png" }) {
         childImageSharp {
           fixed(width: 100, height: 100) {
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_withWebp
           }
         }
       }
