@@ -9,8 +9,8 @@ const About = () => {
     query {
       file(relativePath: { eq: "chill-guy.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 900) {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth: 900, quality: 70) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

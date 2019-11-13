@@ -22,8 +22,8 @@ const BlogRoll = () => (
                 description
                 featuredimage {
                   childImageSharp {
-                    fluid(maxWidth: 1000, quality: 100) {
-                      ...GatsbyImageSharpFluid
+                    fluid(maxWidth: 900, quality: 70) {
+                      ...GatsbyImageSharpFluid_withWebp
                     }
                   }
                 }

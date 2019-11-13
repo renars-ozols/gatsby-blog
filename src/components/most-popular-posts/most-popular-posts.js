@@ -19,7 +19,7 @@ const MostPopularPosts = () => {
               featuredimage {
                 childImageSharp {
                   fixed(width: 100, height: 100) {
-                    ...GatsbyImageSharpFixed
+                    ...GatsbyImageSharpFixed_withWebp
                   }
                 }
               }
