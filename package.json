@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-blog",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Portfolio project",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Renars Ozols <renarsozols@gmail.com>",
   "dependencies": {
     "animate.css": "^3.7.2",
     "axios": "^0.19.0",
@@ -23,7 +23,6 @@
     "gatsby-plugin-offline": "^2.2.7",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-plugin-react-helmet": "^3.1.4",
-    "gatsby-plugin-react-svg": "^2.1.2",
     "gatsby-plugin-sass": "^2.1.13",
     "gatsby-plugin-sharp": "^2.2.13",
     "gatsby-plugin-styled-components": "^3.1.4",
@@ -57,7 +56,7 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",
+  "license": "UNLICENSED",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -68,7 +67,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/renars1988/gatsby-blog"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
