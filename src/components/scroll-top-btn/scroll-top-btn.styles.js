@@ -17,4 +17,8 @@ export const StyledBtn = styled.a`
       font-size: 3rem
       padding: 0 1.5rem;
     `}
+
+  ${props => props.theme.media.desktop`
+      display: none;
+    `}
 `
