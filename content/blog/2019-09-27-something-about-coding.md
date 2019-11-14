@@ -1,12 +1,14 @@
 ---
-title: Something about coding
+title: Laptop and coffee
 featuredimage: /assets/apple-black-and-white-black-and-white-169573.jpg
 date: 2019-09-27T06:21:15.547Z
-description: Some description about coding
+description: Some description about this post
 tags:
   - something
   - about
   - reading
+  - tech
+  - coffee
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas congue quisque egestas diam in. Et malesuada fames ac turpis egestas maecenas pharetra convallis posuere. Urna cursus eget nunc scelerisque viverra mauris in aliquam. Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Diam vel quam elementum pulvinar etiam non quam lacus suspendisse. Lectus magna fringilla urna porttitor rhoncus dolor purus non. Duis ut diam quam nulla porttitor massa id neque aliquam. Condimentum id venenatis a condimentum vitae sapien pellentesque habitant morbi. Odio ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Commodo nulla facilisi nullam vehicula. Morbi tincidunt ornare massa eget egestas purus viverra accumsan. Nisi quis eleifend quam adipiscing vitae proin sagittis.
 
